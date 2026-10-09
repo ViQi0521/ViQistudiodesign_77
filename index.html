@@ -148,14 +148,14 @@
 @media(prefers-reduced-motion:reduce){.interest-card{transition:none!important}}
 /* Blue accent atmosphere and playful, non-interactive SVG decorations. */
 .hero{isolation:isolate}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.52;pointer-events:none}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.18;filter:saturate(.65) brightness(1.04);pointer-events:none}
 .hero-atmosphere{z-index:0}.hero-atmosphere>.playful-decor-layer{position:absolute;inset:0;z-index:2;pointer-events:none}
-.hero-atmosphere:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(130deg,rgba(238,244,255,.42),rgba(229,237,255,.16) 48%,rgba(235,246,255,.30)),radial-gradient(ellipse at 15% 28%,rgba(66,117,244,.18),transparent 45%),radial-gradient(ellipse at 90% 76%,rgba(74,184,241,.18),transparent 38%)}
+.hero-atmosphere:before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(105deg,rgba(246,247,251,.94) 0%,rgba(242,245,251,.90) 52%,rgba(239,245,242,.84) 100%),radial-gradient(ellipse at 10% 15%,rgba(142,164,226,.14),transparent 43%),radial-gradient(ellipse at 86% 76%,rgba(156,211,191,.14),transparent 37%),radial-gradient(ellipse at 65% 12%,rgba(190,177,220,.12),transparent 32%)}
 .hero-atmosphere>*{z-index:1}
 .section{isolation:isolate}
 main>.section>.playful-decor-layer{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 main>.section>:not(.playful-decor-layer){position:relative;z-index:1}
-.playful-decor-layer:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 3% 24%,rgba(77,125,244,.19),transparent 34%),radial-gradient(ellipse at 96% 76%,rgba(88,195,243,.18),transparent 34%),linear-gradient(125deg,rgba(108,145,244,.08),transparent 48%,rgba(133,164,245,.09));pointer-events:none}
+.playful-decor-layer:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 8% 20%,rgba(74,132,255,.3),transparent 37%),radial-gradient(ellipse at 90% 76%,rgba(119,207,246,.25),transparent 38%),radial-gradient(ellipse at 72% 12%,rgba(193,172,255,.17),transparent 30%),linear-gradient(125deg,rgba(163,190,255,.15),transparent 48%,rgba(181,226,255,.12));pointer-events:none}
 .mood-icon{position:absolute;display:block;width:clamp(26px,3.2vw,46px);height:auto;opacity:.88;transform:rotate(var(--mood-tilt,0deg));transform-origin:center;filter:drop-shadow(0 5px 8px rgba(72,98,169,.14));animation:moodFloat 4.2s ease-in-out var(--float-delay,0s) infinite,moodTwinkle 2.8s ease-in-out var(--twinkle-delay,0s) infinite;will-change:transform,opacity}
 .mood-icon svg{display:block;width:100%;height:auto;overflow:visible}
 .mood-icon--1{top:15%;left:2.2%}.mood-icon--2{top:24%;right:3.3%;width:clamp(23px,2.8vw,40px)}.mood-icon--3{bottom:14%;left:5%;width:clamp(24px,2.9vw,42px)}.mood-icon--4{right:2.3%;bottom:11%;width:clamp(25px,3vw,44px)}
@@ -167,8 +167,11 @@ main>.section>:not(.playful-decor-layer){position:relative;z-index:1}
 .project-viewer img{position:relative;z-index:1}
 .photo-lightbox .lightbox-picture{position:relative;z-index:1}
 .photo-lightbox.interest-image-viewer .mood-icon{opacity:.52}
-@media(max-width:760px){.hero-video{opacity:.42}.mood-icon{width:clamp(22px,7vw,32px)}.mood-icon--1{top:18%;left:1.4%}.mood-icon--2{top:22%;right:1.6%;width:clamp(20px,6vw,29px)}.mood-icon--3{bottom:12%;left:2.4%;width:clamp(21px,6vw,30px)}.mood-icon--4{right:1.5%;bottom:10%;width:clamp(22px,6.5vw,31px)}}
-@media(prefers-reduced-motion:reduce){.mood-icon{animation:none!important;will-change:auto}.hero-video{opacity:.34}}
+/* Match the soft blue, misty lilac, and mint palette used by Portfolio/Contact. */
+.tools{background:linear-gradient(145deg,rgba(241,243,250,.92),rgba(247,248,251,.94) 48%,rgba(239,245,241,.92))}
+.tools>.playful-decor-layer:before{background:radial-gradient(ellipse at 12% 18%,rgba(153,177,240,.11),transparent 42%),radial-gradient(ellipse at 84% 82%,rgba(187,223,209,.13),transparent 42%),linear-gradient(130deg,rgba(238,233,248,.12),transparent 50%)}
+@media(max-width:760px){.hero-video{opacity:.12}.mood-icon{width:clamp(22px,7vw,32px)}.mood-icon--1{top:18%;left:1.4%}.mood-icon--2{top:22%;right:1.6%;width:clamp(20px,6vw,29px)}.mood-icon--3{bottom:12%;left:2.4%;width:clamp(21px,6vw,30px)}.mood-icon--4{right:1.5%;bottom:10%;width:clamp(22px,6.5vw,31px)}}
+@media(prefers-reduced-motion:reduce){.mood-icon{animation:none!important;will-change:auto}.hero-video{opacity:0}}
 </style>
 </head>
 <body>
