@@ -27,15 +27,15 @@
 .interest-card{left:50%;top:50%;transition:transform .56s cubic-bezier(.2,.8,.2,1),opacity .42s ease,z-index .56s;will-change:transform;transform:translate(-50%,-50%) translateX(calc(var(--slot-x,0px) + var(--drag-x,0px))) translateY(var(--slot-y,0px)) rotateY(var(--tilt-y,0deg)) rotate(var(--card-rotate,0deg)) scale(var(--card-scale,1));backface-visibility:hidden;transform-origin:50% 65%}
 .interest-stage.is-dragging .interest-card{transition:none!important}
 .interest-card.center{--slot-x:0px;--slot-y:-8px;--tilt-y:0deg;--card-rotate:0deg;--card-scale:1.02;opacity:1}
-.interest-card.side1{--slot-x:165px;--slot-y:0px;--tilt-y:-9deg;--card-rotate:5deg;--card-scale:.91;opacity:.92}
-.interest-card.side2{--slot-x:315px;--slot-y:5px;--tilt-y:-13deg;--card-rotate:10deg;--card-scale:.83;opacity:.76}
-.interest-card.side3{--slot-x:455px;--slot-y:10px;--tilt-y:-16deg;--card-rotate:14deg;--card-scale:.75;opacity:.56}
-.interest-card.side4{--slot-x:570px;--slot-y:14px;--tilt-y:-18deg;--card-rotate:18deg;--card-scale:.67;opacity:.38}
-.interest-card.left1{--slot-x:-165px;--slot-y:0px;--tilt-y:9deg;--card-rotate:-5deg;--card-scale:.91;opacity:.92}
-.interest-card.left2{--slot-x:-315px;--slot-y:5px;--tilt-y:13deg;--card-rotate:-10deg;--card-scale:.83;opacity:.76}
-.interest-card.left3{--slot-x:-455px;--slot-y:10px;--tilt-y:16deg;--card-rotate:-14deg;--card-scale:.75;opacity:.56}
+.interest-card.side1{--slot-x:190px;--slot-y:0px;--tilt-y:-9deg;--card-rotate:5deg;--card-scale:.91;opacity:.92}
+.interest-card.side2{--slot-x:340px;--slot-y:5px;--tilt-y:-13deg;--card-rotate:10deg;--card-scale:.83;opacity:.76}
+.interest-card.side3{--slot-x:480px;--slot-y:10px;--tilt-y:-16deg;--card-rotate:14deg;--card-scale:.75;opacity:.56}
+.interest-card.side4{--slot-x:600px;--slot-y:14px;--tilt-y:-18deg;--card-rotate:18deg;--card-scale:.67;opacity:.38}
+.interest-card.left1{--slot-x:-190px;--slot-y:0px;--tilt-y:9deg;--card-rotate:-5deg;--card-scale:.91;opacity:.92}
+.interest-card.left2{--slot-x:-340px;--slot-y:5px;--tilt-y:13deg;--card-rotate:-10deg;--card-scale:.83;opacity:.76}
+.interest-card.left3{--slot-x:-480px;--slot-y:10px;--tilt-y:16deg;--card-rotate:-14deg;--card-scale:.75;opacity:.56}
 .interest-card:focus-visible{outline:2px solid var(--blue);outline-offset:5px}
-@media(max-width:760px){.interest-stage{touch-action:pan-y}.interest-card{width:min(205px,62vw);height:225px}.interest-card.side1{--slot-x:112px}.interest-card.side2{--slot-x:205px}.interest-card.side3{--slot-x:285px}.interest-card.side4{--slot-x:350px}.interest-card.left1{--slot-x:-112px}.interest-card.left2{--slot-x:-205px}.interest-card.left3{--slot-x:-285px}}
+@media(max-width:760px){.interest-stage{touch-action:pan-y}.interest-card{width:min(205px,62vw);height:225px}.interest-card.side1{--slot-x:128px}.interest-card.side2{--slot-x:230px}.interest-card.side3{--slot-x:320px}.interest-card.side4{--slot-x:395px}.interest-card.left1{--slot-x:-128px}.interest-card.left2{--slot-x:-230px}.interest-card.left3{--slot-x:-320px}}
 @media(prefers-reduced-motion:reduce){.interest-card{transition:none!important}}/* Lift the fan clear of its controls and center cards precisely */
 .interest-card{top:38%}
 .interest-card.center,.interest-card.side1,.interest-card.side2,.interest-card.side3,.interest-card.side4,.interest-card.left1,.interest-card.left2,.interest-card.left3{transform:translateX(calc(var(--slot-x, 0px) + var(--drag-x, 0px) - 50%)) translateY(var(--slot-y, 0px)) rotateY(var(--tilt-y, 0deg)) rotate(var(--card-rotate, 0deg)) scale(var(--card-scale, 1))}
@@ -176,7 +176,7 @@ main>.section>:not(.playful-decor-layer){position:relative;z-index:1}main>.hero>
 /* Text-only interest cards enter one by one; the final state stays readable without motion. */
 .interest-card{justify-content:center;align-items:center;text-align:center;overflow:hidden;transition:transform .68s cubic-bezier(.2,.8,.2,1),opacity .52s ease;will-change:transform,opacity}
 .interest-card small{position:absolute;top:22px;left:22px;z-index:2;font-size:9px;letter-spacing:.14em;color:#626a88}
-.interest-card strong{display:block;position:relative;z-index:2;max-width:100%;font:800 clamp(19px,2.1vw,25px)/1.08 'Manrope',sans-serif;letter-spacing:-.045em;overflow-wrap:anywhere}
+.interest-card strong{display:block;position:relative;z-index:2;width:100%;min-width:0;max-width:100%;font:800 clamp(18px,1.8vw,22px)/1.08 'Manrope',sans-serif;letter-spacing:-.045em;white-space:normal;overflow-wrap:anywhere;text-wrap:balance}
 .interest-card.center strong{color:#354f9c}
 .interest-stage .interest-card{transform:translateX(calc(var(--slot-x, 0px) + var(--drag-x, 0px) - 50%)) translateY(calc(var(--slot-y, 0px) + var(--entry-y, 0px))) rotateY(var(--tilt-y, 0deg)) rotate(var(--card-rotate, 0deg)) scale(var(--card-scale, 1))}
 .interest-stage.is-motion-ready:not(.is-in-view) .interest-card{--entry-y:26px;opacity:0}
